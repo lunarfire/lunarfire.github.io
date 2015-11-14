@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_Emulator.jpg">
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_EditConfig.jpg">
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_Config.jpg">
-<meta property="og:updated_time" content="2015-11-14T15:14:00.228Z">
+<meta property="og:updated_time" content="2015-11-14T16:16:53.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio for Windows的安装与配置">
 <meta name="twitter:description" content="本文简要说明了Android Studio for Windows的下载、安装与配置要点。完成本文提供的步骤，即可正式开始Windows平台的Android编程之旅。">
@@ -239,6 +239,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          <div id="toc" class="toc-article">
+    <div class="toc-title">文章目录</div>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_下载并配置Java环境"><span class="toc-text">1. 下载并配置Java环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_下载并安装Android_Studio_for_Windows"><span class="toc-text">2. 下载并安装Android Studio for Windows</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_配置Github_(可选)"><span class="toc-text">3. 配置Github (可选)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_配置界面主题_(可选)"><span class="toc-text">4. 配置界面主题 (可选)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_配置字体与字号_(可选)"><span class="toc-text">5. 配置字体与字号 (可选)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码编辑器"><span class="toc-text">代码编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#左侧边栏和底栏"><span class="toc-text">左侧边栏和底栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制台"><span class="toc-text">控制台</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-_配置文本编码规则_(推荐)"><span class="toc-text">6. 配置文本编码规则 (推荐)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-_配置自动导包功能_(推荐)"><span class="toc-text">7. 配置自动导包功能 (推荐)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-_显示行号和方法分隔线_(推荐)"><span class="toc-text">8. 显示行号和方法分隔线 (推荐)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-_生成存取方法时忽略前缀_(可选)"><span class="toc-text">9. 生成存取方法时忽略前缀 (可选)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-_设备调试设置"><span class="toc-text">10. 设备调试设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-_更多"><span class="toc-text">11. 更多</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-_鸣谢"><span class="toc-text">12. 鸣谢</span></a></li></ol>
+</div>
+        
         <p>本文简要说明了Android Studio for Windows的下载、安装与配置要点。完成本文提供的步骤，即可正式开始Windows平台的Android编程之旅。<br><a id="more"></a></p>
 <h1 id="1-_下载并配置Java环境">1. 下载并配置Java环境</h1><p>到 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Oracle官网</a> 下载并安装最新版本Oracle Java Standard Edition (Java SE) 对应的JDK，然后配置环境变量 (系统变量，下同) <code>JAVA_HOME</code>为JDK安装目录 (通常为<code>C:\Program Files\Java\jdk1.x.x_xx</code>目录)，配置环境变量<code>CLASSPATH</code>为<code>.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\bin;</code>。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_JavaEnvVar.png" alt=""></p>
 <ul>
