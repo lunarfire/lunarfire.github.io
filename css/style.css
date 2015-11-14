@@ -2290,7 +2290,7 @@ pre .css ~ * .id {
   overflow: hidden;
 }
 .search {
-  padding: 1em 0 0 2.5em;
+  padding: 3em 0 0 2.3em;
 }
 .search input {
   line-height: 1.8em;
@@ -2314,8 +2314,8 @@ pre .css ~ * .id {
 .search label {
   display: none;
 }
-form input.st-search-input_my {
-  font-size: 12px;
+form input#search {
+  font-size: 13px;
   padding: 4px 9px 4px 27px;
   height: 20px;
   width: 190px;
