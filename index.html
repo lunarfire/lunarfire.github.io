@@ -30,7 +30,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="http://7xo7cn.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar">
+			<img lazy-src="http://7xo7cn.com1.z0.glb.clouddn.com/lidewen_avatar.jpg" class="js-avatar">
 			
 		</a>
 
@@ -146,7 +146,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="http://7xo7cn.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar">
+				<img lazy-src="http://7xo7cn.com1.z0.glb.clouddn.com/lidewen_avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">李德文</h1>
@@ -204,34 +204,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-_下载并配置Java环境">1. 下载并配置Java环境</h1><p>到 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Oracle官网</a> 下载并安装最新版本Oracle Java Standard Edition (Java SE) 对应的JDK，然后配置环境变量 (系统变量，下同) <code>JAVA_HOME</code>为JDK安装目录 (通常为<code>C:\Program Files\Java\jdk1.x.x_xx</code>目录)，配置环境变量<code>CLASSPATH</code>为<code>.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\bin;</code>。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置JAVA环境变量.png" alt=""></p>
-<ul>
-<li><p>据 <a href="http://stackoverflow.com/questions/23318109/is-it-possible-to-use-java-8-for-android-development" target="_blank" rel="external">StackOverflow的讨论</a>，在JDK 8环境中，Android Studio工程代码可以正常编译和运行，但是当使用JDK 8提供的新特性，比如Lambda表达式时，会导致编译失败。</p>
-</li>
-<li><p>在Android Studio安装页面中要求JDK 6或更高版本。而开发Android 5.0或更高版本的App时，则要求JDK 7或更高版本。</p>
-</li>
-</ul>
-<h1 id="2-_下载并安装Android_Studio_for_Windows">2. 下载并安装Android Studio for Windows</h1><p>到 <a href="http://developer.android.com/sdk/index.html" target="_blank" rel="external">Android官网</a> 下载最新版本Android Studio安装文件，双击运行android-studio-bundle-xxx.xxxxxxx-windows.exe，配置Android Studio与Android SDK的安装目录后，一路Next，直到安装完成。撰写该节时的Android Studio最新版本为1.4.1。</p>
-<h1 id="3-_配置Github_(可选)">3. 配置Github (可选)</h1><p>如果需要配置Github，则通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Version Control</code> -&gt; <code>Git</code>，填写git.exe的路径。如果安装Github for Windows时使用了默认位置，则git.exe的路径为 <code>C:\Users\&lt;username&gt;\AppData\Local\GitHub\PortableGit_&lt;numbersandletters&gt;\bin\git.exe</code>。填写完成后可以点击Test按钮，测试路径是否填写正确。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置Git.jpg" alt=""></p>
-<p>然后选择菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Version Control</code> -&gt; <code>GitHub</code>，填写GitHub登录用户名和密码。填写完成后同样可以通过点击Test按钮进行测试。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置GitHub.jpg" alt=""></p>
-<h1 id="4-_配置界面主题_(可选)">4. 配置界面主题 (可选)</h1><p>如果对Android Studio的界面默认风格IntelliJ不满意，可以通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Appearance &amp; Behavior</code> -&gt; <code>Appearance</code> 修改<code>Theme</code>。个人认为Darcula黑色主题比较炫酷，各位不妨体验一下。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置主题.jpg" alt=""></p>
-<h1 id="5-_配置字体与字号_(可选)">5. 配置字体与字号 (可选)</h1><h2 id="代码编辑器">代码编辑器</h2><p>代码编辑器中默认字体的字号比较小，编程时眼睛容易疲劳。为了使用合适的字号，可以通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>Colors &amp; Fonts</code> -&gt; <code>Font</code>修改Editor Font里的Size。默认字号是12，可以调整为14或更大。在调整字号之前必须在同一页面上方点击<code>Save As...</code>按钮保存当前设置，然后才能对字号、字体等进行修改。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置代码编辑器字体.jpg" alt=""></p>
-<h2 id="左侧边栏和底栏">左侧边栏和底栏</h2><p>完成对代码编辑器的字号修改后，还需要对Android Studio其他子窗口(如左侧边栏和底栏)的字号进行修改，否则不同子窗口中的字号不一致，会有不谐调感。通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Appearance &amp; Behavior</code> -&gt; <code>Appearance</code>页面中勾选<code>Override default fonts by:</code>文本前的复选框，并将<code>Size</code>调整为14 (与之前代码编辑器中的字号相同)。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置边栏字体.jpg" alt=""></p>
-<h2 id="控制台">控制台</h2><p>同时，通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>Colors &amp; Fonts</code> -&gt; <code>Console Font</code>修改控制台字号为14。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置控制台字体.jpg" alt=""></p>
-<p>至于上述三处设置中的“字体”设置，个人均使用Consolas，保持整体效果的一致性。</p>
-<h1 id="6-_配置文本编码规则_(推荐)">6. 配置文本编码规则 (推荐)</h1><p>由于手机显示的字符通常使用UTF-8编码，因此推荐修改编码规则，避免出现乱码。通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>File Encodings</code>页面，将<code>IDE Encoding</code>、<code>Project Encoding</code>、<code>Default encoding for properties files</code>对应的下拉框内容选择为UTF-8，并勾选<code>Default encoding for properties files</code>后面<code>Transparent native-to-ascii conversion</code>对应的复选框，完成字符编码设置。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置字符编码.jpg" alt=""></p>
-<h1 id="7-_配置自动导包功能_(推荐)">7. 配置自动导包功能 (推荐)</h1><p>自动导包对于Java开发者而言是一项非常便利的功能，可以在开发者使用其他package中的类时，自动添加对应的import语句。通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>General</code> -&gt; <code>Auto Import</code>页面，勾选<code>Java</code>栏下方的<code>Optimize imports on the fly</code>和<code>Add unambiguous imports on the fly</code>对应的复选框，自动导包功能就设置好了。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置自动导包.jpg" alt=""></p>
-<h1 id="8-_显示行号和方法分隔线_(推荐)">8. 显示行号和方法分隔线 (推荐)</h1><p>显示行号和方法分隔线可以方便阅读代码。通过菜单<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>General</code> -&gt; <code>Appearance</code>页面，勾选<code>Show line numbers</code>和<code>Show method separators</code>对应的复选框，完成设置。由于个人不大习惯方法分隔线，因此仅设置“显示行号”。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置行号.jpg" alt=""></p>
-<h1 id="9-_生成存取方法时忽略前缀_(可选)">9. 生成存取方法时忽略前缀 (可选)</h1><p>如果在Android开发中使用m前缀来命名普通成员变量，使用s前缀来命名静态成员变量，则在生成变量的<code>getter</code>/<code>setter</code>方法时，可以在自动生成的方法名中忽略这些前缀。例如，对于成员变量<code>mDate</code>，如果不进行设置，则生成的<code>getter</code>方法将是<code>getmDate</code>，而设置后则生成正常的<code>getDate</code>。通过<code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>Code Style</code> -&gt; <code>Java</code>页面，点击<code>Code Generation</code>选项卡，在<code>Field</code>一栏对应的<code>Name prefix</code>编辑框中填写m，在<code>Static field</code>一栏对应的<code>Name prefix</code>编辑框中填写s，即完成设置。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置忽略前缀.jpg" alt=""></p>
-<h1 id="10-_设备调试设置">10. 设备调试设置</h1><p>完成App程序编写后，需运行查看效果，此时可以使用Android模拟器或真机进行调试。如果使用模拟器，则点击右上方的<code>AVD Manager</code>按钮，在弹出的窗口中点击<code>Create Virtual Device</code>，依次选择硬件机型，系统版本，点击Finish后即完成一台虚拟设备的创建。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置模拟器.jpg" alt=""></p>
-<p>随后在<code>Edit Configurations...</code>中选择<code>Target Device</code>一栏中的<code>Show chooser dialog</code>，则运行程序时会弹出选择窗口，让开发者选择使用模拟器或者真机设备。选择<code>USB device</code>，则运行程序时始终使用USB连接的真机设备进行调试。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/配置调试项.jpg" alt=""></p>
-<h1 id="11-_更多">11. 更多</h1><p>以上是个人的经验记录，更为全面的Android Studio设置教程参见 <a href="http://www.licheedev.com/2015/05/02/android-studio-settings/" target="_blank" rel="external">LicheeDev-某黎的博客</a>。</p>
-<h1 id="12-_鸣谢">12. 鸣谢</h1><p>本文撰写过程中主要参考了以下博客的内容，向原作者表示衷心的感谢。</p>
-<ul>
-<li><a href="http://www.licheedev.com/2015/05/02/android-studio-settings/" target="_blank" rel="external">LicheeDev-某黎的博客</a></li>
-<li><a href="http://stormzhang.com/devtools/2014/11/28/android-studio-tutorial2/" target="_blank" rel="external">stormzhang的博客</a></li>
-</ul>
-
+        <p>本文简要说明了Android Studio for Windows的下载、安装与配置要点。完成本文提供的步骤，即可正式开始Windows平台的Android编程之旅。<br>
       
     </div>
     
@@ -248,6 +221,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/10/Android-Studio-for-Windows的安装与配置/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
