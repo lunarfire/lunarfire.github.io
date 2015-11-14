@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_Emulator.jpg">
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_EditConfig.jpg">
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_Config.jpg">
-<meta property="og:updated_time" content="2015-11-14T12:11:10.785Z">
+<meta property="og:updated_time" content="2015-11-14T15:01:51.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio for Windows的安装与配置">
 <meta name="twitter:description" content="本文简要说明了Android Studio for Windows的下载、安装与配置要点。完成本文提供的步骤，即可正式开始Windows平台的Android编程之旅。">
@@ -239,7 +239,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文简要说明了Android Studio for Windows的下载、安装与配置要点。完成本文提供的步骤，即可正式开始Windows平台的Android编程之旅。<br><a id="more"></a></p>
+        <p>本文简要说明了Android Studio for Windows的下载、安装与配置要点。完成本文提供的步骤，即可正式开始Windows平台的Android编程之旅。<br><!--阅读全文--></p>
 <h1 id="1-_下载并配置Java环境">1. 下载并配置Java环境</h1><p>到 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Oracle官网</a> 下载并安装最新版本Oracle Java Standard Edition (Java SE) 对应的JDK，然后配置环境变量 (系统变量，下同) <code>JAVA_HOME</code>为JDK安装目录 (通常为<code>C:\Program Files\Java\jdk1.x.x_xx</code>目录)，配置环境变量<code>CLASSPATH</code>为<code>.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\bin;</code>。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/AS_Setup_JavaEnvVar.png" alt=""></p>
 <ul>
 <li><p>据 <a href="http://stackoverflow.com/questions/23318109/is-it-possible-to-use-java-8-for-android-development" target="_blank" rel="external">StackOverflow的讨论</a>，在JDK 8环境中，Android Studio工程代码可以正常编译和运行，但是当使用JDK 8提供的新特性，比如Lambda表达式时，会导致编译失败。</p>
