@@ -4,7 +4,7 @@
   <subtitle><![CDATA[宠辱不惊，闲看庭前花开花落；去留无意，漫随天外云卷云舒]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lidewen.com/"/>
-  <updated>2015-11-18T03:23:57.476Z</updated>
+  <updated>2015-11-18T03:37:15.073Z</updated>
   <id>http://lidewen.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lidewen.com/2015/11/18/Hexo-Sitemap-and-AutoPush/"/>
     <id>http://lidewen.com/2015/11/18/Hexo-Sitemap-and-AutoPush/</id>
     <published>2015-11-18T01:33:05.000Z</published>
-    <updated>2015-11-18T03:23:57.476Z</updated>
+    <updated>2015-11-18T03:37:15.073Z</updated>
     <content type="html"><![CDATA[<p>本文仅需三步即可建立Hexo博客网站的Sitemap和百度自动推送功能，实现了新增页面自动提交百度检索，从而提升该网站的博客文章被用户搜索、访问的机会和时效性。<br>以下是具体的操作步骤：<br><a id="more"></a></p>
 <h1 id="1-_配置百度站长平台">1. 配置百度站长平台</h1><h2 id="1-1-_站点管理">1.1. 站点管理</h2><p>注册并登录 <a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长平台</a> 后，需要输入Hexo博客网站域名，并进行网站验证。对于Hexo博客系统，由于站点html页面通常是系统自动生成的，不方便进行<code>文件验证</code>和<code>html标签验证</code>，此处推荐选择<code>CNAME验证</code>方式。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SiteVerify.png" alt=""></p>
 <p>在博客网站域名对应的域名管理网站，按图中要求添加一条CNAME类型的域名解析规则即可。返回站长平台页面，完成验证。</p>
@@ -34,7 +34,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>下次运行<code>hexo g</code>命令后，系统便会在博客根目录的public文件夹下自动生成sitemap.xml文件。该文件通过<code>hexo d</code>命令被部署到GitHub等托管网站，从而被百度搜索引擎访问到。<br>完成博客部署后，自己也可以在浏览器中通过 <code>&lt;你的域名地址&gt;/sitemap.xml</code> 访问并查看Sitemap文件的内容。</p>
+<p>下次运行<code>hexo g</code>命令后，系统便会在博客根目录的public文件夹下自动生成sitemap.xml文件。该文件通过<code>hexo d</code>命令被部署到GitHub等托管网站，从而被百度搜索引擎访问到。<br>完成博客部署后，自己也可以在浏览器中通过 <code>&lt;你的域名地址&gt;/sitemap.xml</code> 访问并查看Sitemap文件的内容，从而确认sitemap.xml文件已存在。</p>
 <h2 id="2-2-_提交Sitemap文件">2.2. 提交Sitemap文件</h2><p>回到站长平台的链接提交页面，在<code>自动提交</code> -&gt; <code>sitemap</code> 对应的文本编辑框中输入 <code>&lt;你的域名地址&gt;/sitemap.xml</code>，点击提交按钮后即完成了Sitemap文件的提交。百度搜索引擎会定期抓取该文件，从而获得博客网站中可供抓取的网页的链接地址。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SiteMap.png" alt=""></p>
 <h1 id="3-_自动推送方式提交">3. 自动推送方式提交</h1><p>百度站长平台对自动推送方式的说明如下：</p>
 <blockquote>
@@ -43,7 +43,7 @@
 <p>Hexo博客不同主题 (Theme) 的实现源代码有所不同，因此本文以yilia主题为例来说明如何添加自动推送JS代码。在本机 <code>&lt;博客根目录&gt;/themes/yilia/layout/_partial</code> 目录下打开article.ejs文件，定位到如下两段代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; theme.duoshuo &amp;&amp; post.comments)&#123; %&gt;</span><br><span class="line">&lt;%- partial(<span class="string">'post/duoshuo'</span>, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_<span class="keyword">for</span>(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
 <p>和<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">&lt;section id=<span class="string">"comments"</span>&gt;</span><br><span class="line">  &lt;div id=<span class="string">"disqus_thread"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <p>在以上两段代码之间插入如下代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!index)&#123; %&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var bp = document.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    var s = document.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;/script&gt;     </span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
-<p>即完成了自动推送方式提交。</p>
+<p>即完成了新增博客文章页面（不包括其他页面）的自动推送方式提交。</p>
 <hr>
 <p>完成以上三步后，可以经常登录到百度站长平台，查看Hexo博客网站的链接提交情况：<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SiteQuote.png" alt=""><br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SitemapResult.png" alt=""></p>
 ]]></content>
