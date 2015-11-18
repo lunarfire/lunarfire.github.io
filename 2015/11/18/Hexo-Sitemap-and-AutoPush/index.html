@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SiteMap.png">
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SiteQuote.png">
 <meta property="og:image" content="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SitemapResult.png">
-<meta property="og:updated_time" content="2015-11-18T03:11:00.971Z">
+<meta property="og:updated_time" content="2015-11-18T03:23:57.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客网站建立Sitemap和百度自动推送">
 <meta name="twitter:description" content="本文仅需三步即可建立Hexo博客网站的Sitemap和百度自动推送功能，实现了新增页面自动提交百度检索，从而提升该网站的博客文章被用户搜索、访问的机会和时效性。">
@@ -253,7 +253,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>下次运行<code>hexo -g</code>命令后，系统便会在博客根目录的public文件夹下自动生成sitemap.xml文件。该文件通过<code>hexo -d</code>命令被部署到GitHub等托管网站，从而被百度搜索引擎访问到。<br>完成博客部署后，自己也可以在浏览器中通过 <code>&lt;你的域名地址&gt;/sitemap.xml</code> 访问并查看Sitemap文件的内容。</p>
+<p>下次运行<code>hexo g</code>命令后，系统便会在博客根目录的public文件夹下自动生成sitemap.xml文件。该文件通过<code>hexo d</code>命令被部署到GitHub等托管网站，从而被百度搜索引擎访问到。<br>完成博客部署后，自己也可以在浏览器中通过 <code>&lt;你的域名地址&gt;/sitemap.xml</code> 访问并查看Sitemap文件的内容。</p>
 <h2 id="2-2-_提交Sitemap文件">2.2. 提交Sitemap文件</h2><p>回到站长平台的链接提交页面，在<code>自动提交</code> -&gt; <code>sitemap</code> 对应的文本编辑框中输入 <code>&lt;你的域名地址&gt;/sitemap.xml</code>，点击提交按钮后即完成了Sitemap文件的提交。百度搜索引擎会定期抓取该文件，从而获得博客网站中可供抓取的网页的链接地址。<br><img src="http://7xo7cn.com1.z0.glb.clouddn.com/Hexo_Retrieve_SiteMap.png" alt=""></p>
 <h1 id="3-_自动推送方式提交">3. 自动推送方式提交</h1><p>百度站长平台对自动推送方式的说明如下：</p>
 <blockquote>
